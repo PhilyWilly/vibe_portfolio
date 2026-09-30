@@ -71,9 +71,9 @@ class _SkillShowcase extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(name),
+        VibeText(name),
         const Spacer(),
-        Text(grade.name, style: TextStyle(color: grade.color)),
+        VibeText(grade.name, style: TextStyle(color: grade.color)),
       ],
     );
   }

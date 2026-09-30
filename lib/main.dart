@@ -5,6 +5,7 @@ import 'package:illusionary_vibe/illusionary_vibe.dart';
 import 'package:vibe_portfolio/pages/home_page.dart';
 import 'package:vibe_portfolio/pages/impressum_page.dart';
 import 'package:vibe_portfolio/pages/not_found_page.dart';
+import 'package:vibe_portfolio/pages/privacy_policy_page.dart';
 
 void main() {
   usePathUrlStrategy();
@@ -18,6 +19,10 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/impressum',
       builder: (context, state) => const ImpressumPage(),
+    ),
+    GoRoute(
+      path: '/privacy_policy',
+      builder: (context, state) => const PrivacyPolicyPage(),
     ),
     // GoRoute(
     //   path: '/projects',

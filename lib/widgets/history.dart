@@ -12,8 +12,8 @@ class History extends StatelessWidget {
       instructions: [
         Column(
           children: [
-            Text('2023 July'),
-            Text(
+            VibeText('2023 July'),
+            VibeText(
               'Realschule Graduation (1,8)',
               style: TextStyle(color: Vibe.colors.textSecondary),
             ),
@@ -21,8 +21,8 @@ class History extends StatelessWidget {
         ),
         Column(
           children: [
-            Text('2026 July'),
-            Text(
+            VibeText('2026 July'),
+            VibeText(
               'Abitur Graduation (2,4)',
               style: TextStyle(color: Vibe.colors.textSecondary),
             ),
@@ -30,8 +30,8 @@ class History extends StatelessWidget {
         ),
         Column(
           children: [
-            Text('2025 February - present'),
-            Text(
+            VibeText('2025 February - present'),
+            VibeText(
               'Rehatec GmbH - Software Developer',
               style: TextStyle(color: Vibe.colors.textSecondary),
             ),

@@ -42,10 +42,13 @@ class _InfoEntry extends StatelessWidget {
       spacing: Vibe.spacing.m,
       children: [
         Expanded(
-          child: Align(alignment: Alignment.centerRight, child: Text("$name:")),
+          child: Align(
+            alignment: Alignment.centerRight,
+            child: VibeText("$name:"),
+          ),
         ),
         Expanded(
-          child: Text(
+          child: VibeText(
             description,
             style: TextStyle(color: Vibe.colors.textSecondary),
           ),

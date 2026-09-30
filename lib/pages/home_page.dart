@@ -41,14 +41,18 @@ class HomePage extends StatelessWidget {
                 ratio: 0.8,
                 first: VibeWindow(
                   title: 'Hello World!',
-                  child: const Text('Hello World!'),
+                  child: const VibeText('Hello World!'),
                 ),
                 second: VibeWindow(
                   child: Row(
                     children: [
                       VibeButton(
                         onPressed: () => context.go('/impressum'),
-                        child: Text('Impressum'),
+                        child: VibeText('Impressum'),
+                      ),
+                      VibeButton(
+                        onPressed: () => context.go('/privacy_policy'),
+                        child: VibeText('Privacy Policy'),
                       ),
                     ],
                   ),
