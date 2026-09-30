@@ -38,13 +38,15 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               second: VibeWindowSplit(
-                ratio: 0.8,
+                ratio: 0.75,
                 first: VibeWindow(
                   title: 'Hello World!',
                   child: const VibeText('Hello World!'),
                 ),
                 second: VibeWindow(
-                  child: Row(
+                  child: Wrap(
+                    spacing: Vibe.spacing.s,
+                    runSpacing: Vibe.spacing.s,
                     children: [
                       VibeButton(
                         onPressed: () => context.go('/impressum'),

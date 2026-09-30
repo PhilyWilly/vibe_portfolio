@@ -73,7 +73,7 @@ class _SkillShowcase extends StatelessWidget {
       children: [
         VibeText(name),
         const Spacer(),
-        VibeText(grade.name, style: TextStyle(color: grade.color)),
+        VibeText.bold(grade.name, style: TextStyle(color: grade.color)),
       ],
     );
   }

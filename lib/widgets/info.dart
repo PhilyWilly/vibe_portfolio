@@ -44,15 +44,10 @@ class _InfoEntry extends StatelessWidget {
         Expanded(
           child: Align(
             alignment: Alignment.centerRight,
-            child: VibeText("$name:"),
+            child: VibeText.bold("$name:"),
           ),
         ),
-        Expanded(
-          child: VibeText(
-            description,
-            style: TextStyle(color: Vibe.colors.textSecondary),
-          ),
-        ),
+        Expanded(child: VibeText.subtitle(description)),
       ],
     );
   }
