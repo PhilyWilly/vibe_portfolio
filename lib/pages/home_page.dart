@@ -49,10 +49,12 @@ class HomePage extends StatelessWidget {
                     runSpacing: Vibe.spacing.s,
                     children: [
                       VibeButton(
+                        style: VibeButtonStyle.integrated,
                         onPressed: () => context.go('/impressum'),
                         child: VibeText('Impressum'),
                       ),
                       VibeButton(
+                        style: VibeButtonStyle.integrated,
                         onPressed: () => context.go('/privacy_policy'),
                         child: VibeText('Privacy Policy'),
                       ),
