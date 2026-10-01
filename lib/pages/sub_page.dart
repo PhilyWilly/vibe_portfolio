@@ -3,14 +3,17 @@ import 'dart:math';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:illusionary_vibe/illusionary_vibe.dart';
+import 'package:vibe_portfolio/l10n/app_localizations.dart';
 
 class SubPage extends StatelessWidget {
-  const new({super.key, required this.child});
+  const SubPage({super.key, required this.child});
 
   final Widget child;
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+
     return Center(
       child: SingleChildScrollView(
         child: Padding(
@@ -35,7 +38,7 @@ class SubPage extends StatelessWidget {
                     context.go('/');
                   }
                 },
-                child: const VibeText('Back'),
+                child: VibeText(localizations.back),
               ),
             ],
           ),

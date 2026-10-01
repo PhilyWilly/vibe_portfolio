@@ -1,5 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:illusionary_vibe/illusionary_vibe.dart';
+import 'package:intl/intl.dart';
+import 'package:vibe_portfolio/l10n/app_localizations.dart';
 
 class Info extends StatelessWidget {
   const Info({super.key});
@@ -18,20 +20,32 @@ class Info extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        _InfoEntry(name: 'Name', description: 'David Wesch'),
-        _InfoEntry(name: 'Age', description: '${_getAge()} (2/9/2007)'),
-        _InfoEntry(name: 'Location', description: 'Germany, Heidelberg'),
-        _InfoEntry(name: 'Email', description: 'info@davidwesch.com'),
+        _InfoEntry(name: localizations.name, description: 'David Wesch'),
+        _InfoEntry(
+          name: localizations.age,
+          description:
+              '${_getAge()} (${DateFormat.yMMMd(Localizations.localeOf(context).toString()).format(DateTime(2007, 2, 9))})',
+        ),
+        _InfoEntry(
+          name: localizations.location,
+          description: '${localizations.country}, Heidelberg',
+        ),
+        _InfoEntry(
+          name: localizations.email,
+          description: 'info@davidwesch.de',
+        ),
       ],
     );
   }
 }
 
 class _InfoEntry extends StatelessWidget {
-  const new({required this.name, required this.description});
+  const _InfoEntry({required this.name, required this.description});
 
   final String name;
   final String description;

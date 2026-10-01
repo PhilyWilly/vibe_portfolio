@@ -1,38 +1,48 @@
 import 'package:flutter/widgets.dart';
 import 'package:illusionary_vibe/illusionary_vibe.dart';
+import 'package:intl/intl.dart';
+import 'package:vibe_portfolio/l10n/app_localizations.dart';
 
 class History extends StatelessWidget {
-  const new({super.key});
+  const History({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+    final realschuleDate = DateFormat.yMMMM(localizations.localeName)
+        .format(DateTime(2023, 7));
+    final abiturDate = DateFormat.yMMMM(localizations.localeName)
+        .format(DateTime(2026, 7));
+    final rehatecDate = DateFormat.yMMMM(localizations.localeName)
+        .format(DateTime(2025, 2));
+
     return VibeInstructions(
       collapsed: true,
       numbered: false,
       instructions: [
         Column(
           children: [
-            VibeText('2023 July'),
+            VibeText(realschuleDate),
             VibeText(
-              'Realschule Graduation (1,8)',
+              localizations.historyRealschule,
               style: TextStyle(color: Vibe.colors.textSecondary),
             ),
           ],
         ),
         Column(
           children: [
-            VibeText('2026 July'),
+            VibeText(abiturDate),
             VibeText(
-              'Abitur Graduation (2,4)',
+              localizations.historyAbitur,
               style: TextStyle(color: Vibe.colors.textSecondary),
             ),
           ],
         ),
         Column(
           children: [
-            VibeText('2025 February - present'),
+            VibeText('$rehatecDate – ${localizations.historyRehatecEnd}'),
             VibeText(
-              'Rehatec GmbH - Software Developer',
+              localizations.historyRehatec,
               style: TextStyle(color: Vibe.colors.textSecondary),
             ),
           ],

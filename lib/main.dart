@@ -1,6 +1,4 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:go_router/go_router.dart';
 import 'package:illusionary_vibe/illusionary_vibe.dart';
 import 'package:vibe_portfolio/l10n/app_localizations.dart';
@@ -8,6 +6,8 @@ import 'package:vibe_portfolio/pages/home_page.dart';
 import 'package:vibe_portfolio/pages/impressum_page.dart';
 import 'package:vibe_portfolio/pages/not_found_page.dart';
 import 'package:vibe_portfolio/pages/privacy_policy_page.dart';
+import 'package:vibe_portfolio/platform_url_strategy.dart'
+    if (dart.library.html) 'package:vibe_portfolio/platform_url_strategy_web.dart';
 
 void main() {
   usePathUrlStrategy();
@@ -26,23 +26,19 @@ final GoRouter _router = GoRouter(
       path: '/privacy_policy',
       builder: (context, state) => const PrivacyPolicyPage(),
     ),
-    // GoRoute(
-    //   path: '/projects',
-    //   builder: (context, state) => const ProjectsPage(),
-    // ),
   ],
-  // Fallback for unknown routes (404)
   errorBuilder: (context, state) => const NotFoundPage(),
 );
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({super.key, this.locale});
 
-  // This widget is the root of your application.
+  final Locale? locale;
+
   @override
   Widget build(BuildContext context) {
     return VibeWidgetApp.router(
-      locale: const Locale('en'),
+      locale: locale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       routerConfig: _router,

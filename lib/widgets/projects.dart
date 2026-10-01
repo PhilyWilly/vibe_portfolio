@@ -1,22 +1,25 @@
 import 'package:flutter/widgets.dart';
 import 'package:illusionary_vibe/illusionary_vibe.dart';
+import 'package:vibe_portfolio/l10n/app_localizations.dart';
 
 class Projects extends StatelessWidget {
-  const new({super.key});
+  const Projects({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: const [
+      children: [
         _ProjectEntry(
-          name: 'IBD Food Scanner',
-          description: 'It\'s main functionality is to scan barcodes and provide information about the food product, including whether it is suitable for people with Inflammatory Bowel Disease (IBD).',
+          name: localizations.projectIbdScanner,
+          description: localizations.projectIbdDescription,
           glow: true,
         ),
         _ProjectEntry(
           name: 'Deep Node Analysis',
-          description: 'A application to connect data. It uses a graph to visualize the relationships between different data and their connections. It can connect json, csv, excel, sql, apis, and more.',
+          description: localizations.projectDeepNodeDescription,
         ),
       ],
     );
@@ -24,7 +27,11 @@ class Projects extends StatelessWidget {
 }
 
 class _ProjectEntry extends StatelessWidget {
-  const new({required this.name, required this.description, this.glow = false});
+  const _ProjectEntry({
+    required this.name,
+    required this.description,
+    this.glow = false,
+  });
 
   final String name;
   final String description;

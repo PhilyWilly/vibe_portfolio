@@ -1,19 +1,20 @@
 import 'package:flutter/widgets.dart';
 import 'package:illusionary_vibe/illusionary_vibe.dart';
+import 'package:vibe_portfolio/l10n/app_localizations.dart';
 
 class Skills extends StatelessWidget {
-  const new({super.key});
+  const Skills({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: const [
+      children: [
         _SkillShowcase(name: 'Flutter', grade: _SkillShowcaseGrade.expert),
         _SkillShowcase(name: 'Python', grade: _SkillShowcaseGrade.advanced),
         _SkillShowcase(name: 'English', grade: _SkillShowcaseGrade.advanced),
         _SkillShowcase(
-          name: 'JavaScript',
+          name: 'TypeScript',
           grade: _SkillShowcaseGrade.intermediate,
         ),
       ],
@@ -26,14 +27,14 @@ enum _SkillShowcaseGrade {
   advanced,
   expert;
 
-  String get name {
+  String getLabel(AppLocalizations localizations) {
     switch (this) {
       case _SkillShowcaseGrade.intermediate:
-        return 'Intermediate';
+        return localizations.gradeIntermediate;
       case _SkillShowcaseGrade.advanced:
-        return 'Advanced';
+        return localizations.gradeAdvanced;
       case _SkillShowcaseGrade.expert:
-        return 'Expert';
+        return localizations.gradeExpert;
     }
   }
 
@@ -62,18 +63,23 @@ enum _SkillShowcaseGrade {
 }
 
 class _SkillShowcase extends StatelessWidget {
-  const new({required this.name, required this.grade});
+  const _SkillShowcase({required this.name, required this.grade});
 
   final String name;
   final _SkillShowcaseGrade grade;
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+
     return Row(
       children: [
         VibeText(name),
         const Spacer(),
-        VibeText.bold(grade.name, style: TextStyle(color: grade.color)),
+        VibeText.bold(
+          grade.getLabel(localizations),
+          style: TextStyle(color: grade.color),
+        ),
       ],
     );
   }

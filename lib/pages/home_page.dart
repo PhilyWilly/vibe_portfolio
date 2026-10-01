@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:illusionary_vibe/illusionary_vibe.dart';
+import 'package:vibe_portfolio/l10n/app_localizations.dart';
 import 'package:vibe_portfolio/widgets/history.dart';
 import 'package:vibe_portfolio/widgets/info.dart';
 import 'package:vibe_portfolio/widgets/projects.dart';
@@ -12,6 +13,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+
     return VibeScaffold(
       child: VibeWindowManager(
         windowsCloasable: false,
@@ -28,25 +31,39 @@ class HomePage extends StatelessWidget {
               first: VibeWindowSplit(
                 first: VibeWindowSplit(
                   first: VibeWindowSplit(
-                    first: VibeWindow(title: 'Info', child: const Info()),
-                    second: VibeWindow(title: 'Skills', child: const Skills()),
+                    first: VibeWindow(
+                      title: localizations.info,
+                      child: const Info(),
+                    ),
+                    second: VibeWindow(
+                      title: localizations.skills,
+                      child: const Skills(),
+                    ),
                   ),
-                  second: VibeWindow(title: 'Socials', child: const Socials()),
+                  second: VibeWindow(
+                    title: localizations.socials,
+                    child: const Socials(),
+                  ),
                   axis: VibeSplitAxis.vertical,
                 ),
                 second: VibeWindowSplit(
-                  first: VibeWindow(title: 'Projects', child: const Projects()),
-                  second: VibeWindow(title: 'History', child: const History()),
+                  first: VibeWindow(
+                    title: localizations.projects,
+                    child: const Projects(),
+                  ),
+                  second: VibeWindow(
+                    title: localizations.history,
+                    child: const History(),
+                  ),
                   axis: VibeSplitAxis.vertical,
                 ),
               ),
               second: VibeWindowSplit(
-                // ratio: 0.75,
                 secondConstraints: BoxConstraints.tightFor(width: 280),
                 first: VibeWindow(
                   showTaskbar: false,
-                  title: 'Hello World!',
-                  child: const VibeText('Hello World!'),
+                  title: localizations.helloWorld,
+                  child: VibeText(localizations.helloWorld),
                 ),
                 second: VibeWindow(
                   showTaskbar: false,
@@ -58,12 +75,12 @@ class HomePage extends StatelessWidget {
                         VibeButton(
                           style: VibeButtonStyle.integrated,
                           onPressed: () => context.go('/impressum'),
-                          child: VibeText('Impressum'),
+                          child: VibeText(localizations.impressum),
                         ),
                         VibeButton(
                           style: VibeButtonStyle.integrated,
                           onPressed: () => context.go('/privacy_policy'),
-                          child: VibeText('Privacy Policy'),
+                          child: VibeText(localizations.privacyPolicy),
                         ),
                       ],
                     ),
