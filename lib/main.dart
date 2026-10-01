@@ -1,7 +1,9 @@
 import 'package:flutter/widgets.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:go_router/go_router.dart';
 import 'package:illusionary_vibe/illusionary_vibe.dart';
+import 'package:vibe_portfolio/l10n/app_localizations.dart';
 import 'package:vibe_portfolio/pages/home_page.dart';
 import 'package:vibe_portfolio/pages/impressum_page.dart';
 import 'package:vibe_portfolio/pages/not_found_page.dart';
@@ -39,6 +41,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return VibeWidgetApp.router(routerConfig: _router, title: 'Portfolio');
+    return VibeWidgetApp.router(
+      locale: const Locale('en'),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      routerConfig: _router,
+      title: 'Portfolio',
+    );
   }
 }
