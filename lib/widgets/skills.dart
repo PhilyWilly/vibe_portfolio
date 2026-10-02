@@ -7,17 +7,20 @@ class Skills extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        _SkillShowcase(name: 'Flutter', grade: _SkillShowcaseGrade.expert),
-        _SkillShowcase(name: 'Python', grade: _SkillShowcaseGrade.advanced),
-        _SkillShowcase(name: 'English', grade: _SkillShowcaseGrade.advanced),
-        _SkillShowcase(
-          name: 'TypeScript',
-          grade: _SkillShowcaseGrade.intermediate,
-        ),
-      ],
+    return IntrinsicHeight(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        spacing: Vibe.spacing.m,
+        children: [
+          _SkillShowcase(name: 'Flutter', grade: _SkillShowcaseGrade.expert),
+          _SkillShowcase(name: 'Python', grade: _SkillShowcaseGrade.advanced),
+          _SkillShowcase(name: 'English', grade: _SkillShowcaseGrade.advanced),
+          _SkillShowcase(
+            name: 'TypeScript',
+            grade: _SkillShowcaseGrade.intermediate,
+          ),
+        ],
+      ),
     );
   }
 }

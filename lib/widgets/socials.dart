@@ -7,27 +7,29 @@ class Socials extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      spacing: Vibe.spacing.m,
-      children: [
-        _SocialEntry(
-          name: 'Instagram',
-          icon: VibeIcons.instagramLogo,
-          url: 'https://www.instagram.com/davidewesch/',
-        ),
-        _SocialEntry(
-          name: 'Twitter',
-          icon: VibeIcons.xLogo,
-          url: 'https://x.com/DavidEWesch',
-        ),
-        _SocialEntry(
-          name: 'LinkedIn',
-          icon: VibeIcons.linkedinLogo,
-          url: 'https://www.linkedin.com/in/david-wesch/',
-        ),
-      ],
+    return IntrinsicHeight(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        spacing: Vibe.spacing.m,
+        children: [
+          _SocialEntry(
+            name: 'Instagram',
+            icon: VibeIcons.instagramLogo,
+            url: 'https://www.instagram.com/davidewesch/',
+          ),
+          _SocialEntry(
+            name: 'Twitter',
+            icon: VibeIcons.xLogo,
+            url: 'https://x.com/DavidEWesch',
+          ),
+          _SocialEntry(
+            name: 'LinkedIn',
+            icon: VibeIcons.linkedinLogo,
+            url: 'https://www.linkedin.com/in/david-wesch/',
+          ),
+        ],
+      ),
     );
   }
 }

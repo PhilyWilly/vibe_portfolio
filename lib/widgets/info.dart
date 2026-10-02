@@ -22,24 +22,27 @@ class Info extends StatelessWidget {
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context)!;
 
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        _InfoEntry(name: localizations.name, description: 'David Wesch'),
-        _InfoEntry(
-          name: localizations.age,
-          description:
-              '${_getAge()} (${DateFormat.yMMMd(Localizations.localeOf(context).toString()).format(DateTime(2007, 2, 9))})',
-        ),
-        _InfoEntry(
-          name: localizations.location,
-          description: '${localizations.country}, Heidelberg',
-        ),
-        _InfoEntry(
-          name: localizations.email,
-          description: 'info@davidwesch.de',
-        ),
-      ],
+    return IntrinsicHeight(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        spacing: Vibe.spacing.m,
+        children: [
+          _InfoEntry(name: localizations.name, description: 'David Wesch'),
+          _InfoEntry(
+            name: localizations.age,
+            description:
+                '${_getAge()} (${DateFormat.yMMMd(Localizations.localeOf(context).toString()).format(DateTime(2007, 2, 9))})',
+          ),
+          _InfoEntry(
+            name: localizations.location,
+            description: '${localizations.country}, Heidelberg',
+          ),
+          _InfoEntry(
+            name: localizations.email,
+            description: 'info@davidwesch.de',
+          ),
+        ],
+      ),
     );
   }
 }

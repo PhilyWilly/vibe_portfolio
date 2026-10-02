@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:illusionary_vibe/illusionary_vibe.dart';
@@ -21,7 +23,7 @@ class HomePage extends StatelessWidget {
         windowsSwapable: false,
         windowsResizable: true,
         stackedBelowWidth: 800,
-        stackedTileHeight: MediaQuery.of(context).size.height * 0.3,
+        stackedTileHeight: max(MediaQuery.of(context).size.height * 0.35, 340),
         windowsPadding: EdgeInsets.all(Vibe.spacing.m),
         controller: VibeWindowManagerController(
           windows: [
@@ -47,6 +49,7 @@ class HomePage extends StatelessWidget {
                   axis: VibeSplitAxis.vertical,
                 ),
                 second: VibeWindowSplit(
+                  secondConstraints: BoxConstraints.tightFor(height: 240),
                   first: VibeWindow(
                     title: localizations.projects,
                     child: const Projects(),
@@ -63,26 +66,30 @@ class HomePage extends StatelessWidget {
                 first: VibeWindow(
                   showTaskbar: false,
                   title: localizations.helloWorld,
-                  child: VibeText(localizations.helloWorld),
+                  child: IntrinsicHeight(
+                    child: Center(child: VibeText(localizations.helloWorld)),
+                  ),
                 ),
                 second: VibeWindow(
                   showTaskbar: false,
-                  child: Center(
-                    child: Wrap(
-                      spacing: Vibe.spacing.s,
-                      runSpacing: Vibe.spacing.s,
-                      children: [
-                        VibeButton(
-                          style: VibeButtonStyle.integrated,
-                          onPressed: () => context.go('/impressum'),
-                          child: VibeText(localizations.impressum),
-                        ),
-                        VibeButton(
-                          style: VibeButtonStyle.integrated,
-                          onPressed: () => context.go('/privacy_policy'),
-                          child: VibeText(localizations.privacyPolicy),
-                        ),
-                      ],
+                  child: IntrinsicHeight(
+                    child: Center(
+                      child: Wrap(
+                        spacing: Vibe.spacing.s,
+                        runSpacing: Vibe.spacing.s,
+                        children: [
+                          VibeButton(
+                            style: VibeButtonStyle.integrated,
+                            onPressed: () => context.go('/impressum'),
+                            child: VibeText(localizations.impressum),
+                          ),
+                          VibeButton(
+                            style: VibeButtonStyle.integrated,
+                            onPressed: () => context.go('/privacy_policy'),
+                            child: VibeText(localizations.privacyPolicy),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
