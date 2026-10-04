@@ -14,7 +14,7 @@ class History extends StatelessWidget {
     final abiturDate = DateFormat.yMMMM(localizations.localeName)
         .format(DateTime(2026, 7));
     final rehatecDate = DateFormat.yMMMM(localizations.localeName)
-        .format(DateTime(2025, 2));
+        .format(DateTime(2025, 5));
 
     return VibeInstructions(
       collapsed: true,

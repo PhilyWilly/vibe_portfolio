@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       routerConfig: _router,
-      title: 'Portfolio',
+      title: 'David Wesch - Portfolio',
     );
   }
 }

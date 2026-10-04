@@ -1,0 +1,9 @@
+# flutter pub run flutter_launcher_icons
+flutter_launcher_icons:
+  image_path: "assets/icons/wappen.png"
+  web:
+    generate: true
+    image_path: "assets/icons/wappen.png"
+    background_color: "#141211"
+    theme_color: "#ffffff"
+
