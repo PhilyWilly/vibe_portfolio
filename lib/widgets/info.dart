@@ -22,10 +22,17 @@ class Info extends StatelessWidget {
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context)!;
 
+    final Map<String, String> infoEntries = {
+      localizations.name: 'David Wesch',
+      localizations.age:
+          '${_getAge()} (${DateFormat.yMMMd(Localizations.localeOf(context).toString()).format(DateTime(2007, 2, 9))})',
+      localizations.location: '${localizations.country}, Heidelberg',
+      localizations.email: 'info@davidwesch.de',
+    };
+
     return IntrinsicHeight(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        spacing: Vibe.spacing.m,
         children: [
           _InfoEntry(name: localizations.name, description: 'David Wesch'),
           _InfoEntry(
@@ -59,12 +66,13 @@ class _InfoEntry extends StatelessWidget {
       spacing: Vibe.spacing.m,
       children: [
         Expanded(
+          flex: 1,
           child: Align(
             alignment: Alignment.centerRight,
             child: VibeText.bold("$name:"),
           ),
         ),
-        Expanded(child: VibeText.subtitle(description)),
+        Expanded(flex: 2, child: VibeText.subtitle(description)),
       ],
     );
   }

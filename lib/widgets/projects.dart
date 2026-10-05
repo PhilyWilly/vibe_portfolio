@@ -9,21 +9,23 @@ class Projects extends StatelessWidget {
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context)!;
 
-    return IntrinsicHeight(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        spacing: Vibe.spacing.l,
-        children: [
-          _ProjectEntry(
-            name: localizations.projectIbdScanner,
-            description: localizations.projectIbdDescription,
-            glow: true,
-          ),
-          _ProjectEntry(
-            name: 'Deep Node Analysis',
-            description: localizations.projectDeepNodeDescription,
-          ),
-        ],
+    return Center(
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          spacing: Vibe.spacing.l,
+          children: [
+            _ProjectEntry(
+              name: localizations.projectIbdScanner,
+              description: localizations.projectIbdDescription,
+              glow: true,
+            ),
+            _ProjectEntry(
+              name: 'Deep Node Analysis',
+              description: localizations.projectDeepNodeDescription,
+            ),
+          ],
+        ),
       ),
     );
   }

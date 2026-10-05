@@ -159,7 +159,6 @@ class GitChart extends StatelessWidget {
           return Center(child: VibeText('Error: ${asyncSnapshot.error}'));
         }
         return VibeChart(
-          glow: true,
           color: Vibe.colors.glowOrange,
           chartCurve: VibeChartCurve.catmullRom,
           intrinsicWidth: false,
@@ -171,6 +170,7 @@ class GitChart extends StatelessWidget {
             final month = Month.fromUniqueDouble(value);
             return month.toString();
           },
+          formatYTickValue: (value) => value.toInt().toString(),
           tooltipMode: VibeChartTooltipMode.xy,
           intrinsicHeight: false,
           data: asyncSnapshot.data ?? [],
