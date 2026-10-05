@@ -22,14 +22,6 @@ class Info extends StatelessWidget {
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context)!;
 
-    final Map<String, String> infoEntries = {
-      localizations.name: 'David Wesch',
-      localizations.age:
-          '${_getAge()} (${DateFormat.yMMMd(Localizations.localeOf(context).toString()).format(DateTime(2007, 2, 9))})',
-      localizations.location: '${localizations.country}, Heidelberg',
-      localizations.email: 'info@davidwesch.de',
-    };
-
     return IntrinsicHeight(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

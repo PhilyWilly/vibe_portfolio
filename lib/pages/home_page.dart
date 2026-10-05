@@ -77,11 +77,13 @@ class HomePage extends StatelessWidget {
               second: VibeWindowSplit(
                 secondConstraints: BoxConstraints.tightFor(width: 280),
                 first: VibeWindow(
-                  showTaskbar: false,
+                  wrapInWindow: false,
+                  padding: EdgeInsets.all(Vibe.spacing.m),
                   child: const HelloWorld(),
                 ),
                 second: VibeWindow(
                   showTaskbar: false,
+                  padding: EdgeInsets.all(Vibe.spacing.m),
                   child: const LegalButtons(),
                 ),
               ),

@@ -9,8 +9,21 @@ class HelloWorld extends StatelessWidget {
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context)!;
 
-    return IntrinsicHeight(
-      child: Center(child: VibeText(localizations.helloWorld)),
+    return VibeTextField(
+      hintText: localizations.helloWorld,
+      onSubmitted: (value) {
+        switch (value.toLowerCase()) {
+          case 'hello world':
+          case 'helloworld':
+          case 'helloworld!':
+          case 'hello world!':
+            VibeToast.show(context, title: 'Hello World!');
+            break;
+          default:
+            VibeToast.show(context, title: 'Unknown command: $value');
+            break;
+        }
+      },
     );
   }
 }
