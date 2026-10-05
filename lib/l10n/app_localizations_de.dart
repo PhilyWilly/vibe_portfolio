@@ -31,6 +31,9 @@ class AppLocalizationsDe extends AppLocalizations {
   String get socials => 'Soziale Medien';
 
   @override
+  String get gitContributions => 'Git-Beiträge pro Monat';
+
+  @override
   String get projects => 'Projekte';
 
   @override

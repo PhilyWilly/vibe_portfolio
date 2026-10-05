@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:illusionary_vibe/illusionary_vibe.dart';
 import 'package:vibe_portfolio/l10n/app_localizations.dart';
+import 'package:vibe_portfolio/widgets/git_chart.dart';
 import 'package:vibe_portfolio/widgets/history.dart';
 import 'package:vibe_portfolio/widgets/info.dart';
 import 'package:vibe_portfolio/widgets/projects.dart';
@@ -31,20 +32,29 @@ class HomePage extends StatelessWidget {
               axis: VibeSplitAxis.vertical,
               ratio: 0.9,
               first: VibeWindowSplit(
+                ratio: 0.65,
                 first: VibeWindowSplit(
                   first: VibeWindowSplit(
+                    ratio: 0.33,
                     first: VibeWindow(
                       title: localizations.info,
                       child: const Info(),
                     ),
-                    second: VibeWindow(
-                      title: localizations.skills,
-                      child: const Skills(),
+                    second: VibeWindowSplit(
+                      axis: VibeSplitAxis.horizontal,
+                      first: VibeWindow(
+                        title: localizations.skills,
+                        child: const Skills(),
+                      ),
+                      second: VibeWindow(
+                        title: localizations.socials,
+                        child: const Socials(),
+                      ),
                     ),
                   ),
                   second: VibeWindow(
-                    title: localizations.socials,
-                    child: const Socials(),
+                    title: localizations.gitContributions,
+                    child: const GitChart(),
                   ),
                   axis: VibeSplitAxis.vertical,
                 ),

@@ -140,6 +140,12 @@ abstract class AppLocalizations {
   /// **'Socials'**
   String get socials;
 
+  /// No description provided for @gitContributions.
+  ///
+  /// In en, this message translates to:
+  /// **'Git Contributions per Month'**
+  String get gitContributions;
+
   /// No description provided for @projects.
   ///
   /// In en, this message translates to:

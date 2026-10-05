@@ -31,6 +31,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get socials => 'Socials';
 
   @override
+  String get gitContributions => 'Git Contributions per Month';
+
+  @override
   String get projects => 'Projects';
 
   @override
