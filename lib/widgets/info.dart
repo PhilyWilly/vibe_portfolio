@@ -25,6 +25,7 @@ class Info extends StatelessWidget {
     return IntrinsicHeight(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
+        spacing: Vibe.spacing.s,
         children: [
           _InfoEntry(name: localizations.name, description: 'David Wesch'),
           _InfoEntry(
