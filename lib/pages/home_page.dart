@@ -75,7 +75,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               second: VibeWindowSplit(
-                secondConstraints: BoxConstraints.tightFor(width: 280),
+                secondConstraints: BoxConstraints.tightFor(width: 310),
                 first: VibeWindow(
                   wrapInWindow: false,
                   padding: EdgeInsets.all(Vibe.spacing.m),
