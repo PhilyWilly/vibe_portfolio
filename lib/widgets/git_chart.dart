@@ -43,8 +43,12 @@ class Month {
   }
 
   factory Month.fromUniqueDouble(double value) {
-    final year = value ~/ 12;
-    final month = (value % 12).toInt();
+    int year = value ~/ 12;
+    int month = (value % 12).toInt();
+    if (month == 0) {
+      month = 12;
+      year -= 1;
+    }
     return Month(month, year);
   }
 }
