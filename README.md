@@ -1,17 +1,17 @@
 # vibe_portfolio
 
-A new Flutter project.
+A portfolio website for David Wesch, showcasing his skills and projects in software engineering, particularly in Flutter and Dart development.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Responsive design for various screen sizes
+- Smooth navigation using GoRouter
+- SEO-friendly with meta tags and sitemap
+- Optimized for performance and accessibility
 
-A few resources to get you started if this is your first Flutter project:
+## Sitemap 
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+The sitemap for the website can be found at: [https://davidwesch.de/sitemap.xml](https://davidwesch.de/sitemap.xml)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## TODO
+- [ ] Add og-image

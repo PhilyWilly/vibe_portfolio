@@ -1,11 +1,11 @@
 {
-    "name": "vibe_portfolio",
-    "short_name": "vibe_portfolio",
+    "name": "David Wesch | Software Engineer",
+    "short_name": "David Wesch",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#141211",
     "theme_color": "#ffffff",
-    "description": "A new Flutter project.",
+    "description": "A portfolio website for David Wesch, showcasing his skills and projects in software engineering, particularly in Flutter and Dart development.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

@@ -1,3 +1,4 @@
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:illusionary_vibe/illusionary_vibe.dart';
@@ -9,8 +10,12 @@ import 'package:vibe_portfolio/pages/privacy_policy_page.dart';
 import 'package:vibe_portfolio/platform_url_strategy.dart'
     if (dart.library.html) 'package:vibe_portfolio/platform_url_strategy_web.dart';
 
+const supportedLangs = ['en', 'de'];
+
 void main() {
   usePathUrlStrategy();
+  WidgetsFlutterBinding.ensureInitialized();
+  SemanticsBinding.instance.ensureSemantics();
   runApp(const MyApp());
 }
 
@@ -42,7 +47,7 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       routerConfig: _router,
-      title: 'David Wesch - Portfolio',
+      title: 'David Wesch | Software Engineer',
     );
   }
 }

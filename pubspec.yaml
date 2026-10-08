@@ -1,5 +1,5 @@
 name: vibe_portfolio
-description: "A new Flutter project."
+description: "A portfolio website for David Wesch, showcasing his skills and projects in software engineering, particularly in Flutter and Dart development."
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
