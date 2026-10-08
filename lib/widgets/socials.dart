@@ -14,6 +14,16 @@ class Socials extends StatelessWidget {
         spacing: Vibe.spacing.m,
         children: [
           _SocialEntry(
+            name: 'LinkedIn',
+            icon: VibeIcons.linkedinLogo,
+            url: 'https://www.linkedin.com/in/david-wesch/',
+          ),
+          _SocialEntry(
+            name: 'GitHub',
+            icon: VibeIcons.githubLogo,
+            url: 'https://github.com/PhilyWilly',
+          ),
+          _SocialEntry(
             name: 'Instagram',
             icon: VibeIcons.instagramLogo,
             url: 'https://www.instagram.com/davidewesch/',
@@ -22,11 +32,6 @@ class Socials extends StatelessWidget {
             name: 'Twitter',
             icon: VibeIcons.xLogo,
             url: 'https://x.com/DavidEWesch',
-          ),
-          _SocialEntry(
-            name: 'LinkedIn',
-            icon: VibeIcons.linkedinLogo,
-            url: 'https://www.linkedin.com/in/david-wesch/',
           ),
         ],
       ),
