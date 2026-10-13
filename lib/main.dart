@@ -1,4 +1,3 @@
-import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:illusionary_vibe/illusionary_vibe.dart';
@@ -15,7 +14,6 @@ const supportedLangs = ['en', 'de'];
 void main() {
   usePathUrlStrategy();
   WidgetsFlutterBinding.ensureInitialized();
-  SemanticsBinding.instance.ensureSemantics();
   runApp(const MyApp());
 }
 

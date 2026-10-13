@@ -11,6 +11,7 @@ class HelloWorld extends StatelessWidget {
 
     return VibeTextField(
       hintText: localizations.helloWorld,
+      autofocus: true,
       onSubmitted: (value) {
         switch (value.toLowerCase()) {
           case 'hello world':
