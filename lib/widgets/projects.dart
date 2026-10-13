@@ -24,6 +24,10 @@ class Projects extends StatelessWidget {
               name: 'Deep Node Analysis',
               description: localizations.projectDeepNodeDescription,
             ),
+            _ProjectEntry(
+              name: localizations.projectHomeServer,
+              description: localizations.projectHomeServerDescription,
+            ),
           ],
         ),
       ),

@@ -21,6 +21,8 @@
   "projectIbdScanner": "IBD Food Scanner",
   "projectIbdDescription": "Its main functionality is to scan barcodes and provide information about the food product, including whether it is suitable for people with Inflammatory Bowel Disease (IBD).",
   "projectDeepNodeDescription": "An application to connect data. It uses a graph to visualize the relationships between different data and their connections. It can connect JSON, CSV, Excel, SQL, APIs, and more.",
+  "projectHomeServer": "Home Server",
+  "projectHomeServerDescription": "My personal home server, which runs on ZimaOS. It is used for various purposes, including cloud storage, media streaming, and network wide dns filtering.",
   "historyRealschule": "Realschule Graduation (1,8)",
   "historyAbitur": "Abitur Graduation (2,4)",
   "historyRehatec": "Rehatec GmbH - Software Developer",

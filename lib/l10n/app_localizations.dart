@@ -224,6 +224,18 @@ abstract class AppLocalizations {
   /// **'An application to connect data. It uses a graph to visualize the relationships between different data and their connections. It can connect JSON, CSV, Excel, SQL, APIs, and more.'**
   String get projectDeepNodeDescription;
 
+  /// No description provided for @projectHomeServer.
+  ///
+  /// In en, this message translates to:
+  /// **'Home Server'**
+  String get projectHomeServer;
+
+  /// No description provided for @projectHomeServerDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'My personal home server, which runs on ZimaOS. It is used for various purposes, including cloud storage, media streaming, and network wide dns filtering.'**
+  String get projectHomeServerDescription;
+
   /// No description provided for @historyRealschule.
   ///
   /// In en, this message translates to:

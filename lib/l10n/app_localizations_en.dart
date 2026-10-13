@@ -75,6 +75,13 @@ class AppLocalizationsEn extends AppLocalizations {
       'An application to connect data. It uses a graph to visualize the relationships between different data and their connections. It can connect JSON, CSV, Excel, SQL, APIs, and more.';
 
   @override
+  String get projectHomeServer => 'Home Server';
+
+  @override
+  String get projectHomeServerDescription =>
+      'My personal home server, which runs on ZimaOS. It is used for various purposes, including cloud storage, media streaming, and network wide dns filtering.';
+
+  @override
   String get historyRealschule => 'Realschule Graduation (1,8)';
 
   @override

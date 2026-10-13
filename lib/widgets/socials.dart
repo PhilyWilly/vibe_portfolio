@@ -59,7 +59,7 @@ class _SocialEntry extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         spacing: Vibe.spacing.m,
-        children: [VibeText(name), Icon(icon)],
+        children: [Icon(icon), VibeText(name)],
       ),
     );
   }
